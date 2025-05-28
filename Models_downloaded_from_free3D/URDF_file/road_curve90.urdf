@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<robot name="static_object">
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/do-gon/ros2_foxy_deepracer_ws/src/Models_downloaded_from_free3D/RoadSection90_L3.123cfac49549-fe2c-4ef6-8ff0-37fd41b4d54a/10561_RoadSection90_v1-L3.obj" scale="0.00211 0.00211 0.00211"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/do-gon/ros2_foxy_deepracer_ws/src/Models_downloaded_from_free3D/RoadSection90_L3.123cfac49549-fe2c-4ef6-8ff0-37fd41b4d54a/10561_RoadSection90_v1-L3.obj" scale="0.00211 0.00211 0.00211"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

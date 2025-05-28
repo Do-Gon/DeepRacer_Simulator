@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<robot name="static_object">
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/do-gon/ros2_foxy_deepracer_ws/src/Models_downloaded_from_free3D/10438_Circular_Grass_Patch_v1_L3.123c72c0e679-bb4b-4162-b0f0-a70f7575d7d8/10438_Circular_Grass_Patch_v1_iterations-2.obj" scale="0.04 0.04 0.04"/> <!-- "0.026 0.026 0.026" -->
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/do-gon/ros2_foxy_deepracer_ws/src/Models_downloaded_from_free3D/10438_Circular_Grass_Patch_v1_L3.123c72c0e679-bb4b-4162-b0f0-a70f7575d7d8/10438_Circular_Grass_Patch_v1_iterations-2.obj" scale="0.04 0.04 0.04"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

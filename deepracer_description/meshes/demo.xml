@@ -1,0 +1,90 @@
+<mujoco model="agent">
+    <compiler angle="radian" />
+    <size njmax="500" nconmax="100" />
+    <asset>
+        <mesh name="laser" file="laser.STL" />
+        <mesh name="deepracer" file="deepracer.STL" />
+    </asset>
+    <worldbody>
+        <!-- The Definition of Ground -->
+        <geom name="ground" type="plane" size="0 0 1" rgba="0.7 1.0 0.1 1"/>
+
+        <!-- 1st deepracer configuration -->
+        <geom pos="0.02913 0 0.184699" quat="-3.67321e-06 0 0 1" type="mesh" mesh="laser" />
+        <geom pos="-0.0762 0 0.023269" type="mesh" mesh="deepracer" />
+
+        <body name="left_rear_wheel" pos="-0.081663 0.08105 0.038999">
+            <inertial pos="0 0 0" quat="0.5 0.500048 0.499952 0.5" mass="0.042222" diaginertia="9.44606e-05 6.11771e-05 6.11771e-05" />
+            <joint name="left_rear_wheel_joint" pos="0 0 0" axis="0 1 0" limited="true" range="-1 1" />
+            <geom size="0.03 0.0125" quat="0.500048 -0.499952 0.5 0.5" type="cylinder" />
+        </body>
+
+        <body name="left_steering_hinge" pos="0.082311 0.079601 0.035008">
+            <inertial pos="0 0 0" mass="0.05" diaginertia="4e-06 4e-06 4e-06" />
+            <joint name="left_steering_hinge_joint" pos="0 0 0" axis="0 0 1" limited="true" range="-1 1" />
+
+            <body name="left_front_wheel" pos="0 0 0">
+                <inertial pos="0 0 0" quat="0.5 0.500048 0.499952 0.5" mass="0.042222" diaginertia="9.44606e-05 6.11771e-05 6.11771e-05" />
+                <joint name="left_front_wheel_joint" pos="0 0 0" axis="0 1 0" limited="true" range="-1 1" />
+                <geom size="0.03 0.0125" quat="0.500048 -0.499952 0.5 0.5" type="cylinder" /> <!-- Fixing quat changes the rotation rate, ex) fast: 0.500048 -0.499952 0.0 0.0-->
+            </body>
+
+        </body>
+
+        <body name="right_rear_wheel" pos="-0.081663 -0.08105 0.038999">
+            <inertial pos="0 0 0" quat="0.5 0.500048 0.499952 0.5" mass="0.042222" diaginertia="9.44606e-05 6.11771e-05 6.11771e-05" />
+            <joint name="right_rear_wheel_joint" pos="0 0 0" axis="0 1 0" limited="true" range="-1 1" />
+            <geom size="0.03 0.0125" quat="0.500048 -0.499952 0.5 0.5" type="cylinder" />
+        </body>
+
+        <body name="right_steering_hinge" pos="0.082311 -0.079601 0.035008">
+            <inertial pos="0 0 0" mass="0.05" diaginertia="4e-06 4e-06 4e-06" />
+            <joint name="right_steering_hinge_joint" pos="0 0 0" axis="0 0 1" limited="true" range="-1 1" />
+
+            <body name="right_front_wheel" pos="0 0 0">
+                <inertial pos="0 0 0" quat="0.5 0.500048 0.499952 0.5" mass="0.042222" diaginertia="9.44606e-05 6.11771e-05 6.11771e-05" />
+                <joint name="right_front_wheel_joint" pos="0 0 0" axis="0 1 0" limited="true" range="-1 1" />
+                <geom size="0.03 0.0125" quat="0.500048 -0.499952 0.5 0.5" type="cylinder" />
+            </body>
+
+        </body>
+        
+        <!-- Second deepracer configuration -->
+        <geom pos="2.02913 0 0.184699" quat="-3.67321e-06 0 0 1" type="mesh" mesh="laser" />
+        <geom pos="1.9238 0 0.023269" type="mesh" mesh="deepracer" />
+
+        <body name="left_rear_wheel_2" pos="1.918337 0.08105 0.038999">
+            <inertial pos="0 0 0" quat="0.5 0.500048 0.499952 0.5" mass="0.042222" diaginertia="9.44606e-05 6.11771e-05 6.11771e-05" />
+            <joint name="left_rear_wheel_joint_2" pos="0 0 0" axis="0 1 0" limited="true" range="-1 1" />
+            <geom size="0.03 0.0125" quat="0.500048 -0.499952 0.5 0.5" type="cylinder" />
+        </body>
+
+        <body name="right_rear_wheel_2" pos="1.918337 -0.08105 0.038999">
+            <inertial pos="0 0 0" quat="0.5 0.500048 0.499952 0.5" mass="0.042222" diaginertia="9.44606e-05 6.11771e-05 6.11771e-05" />
+            <joint name="right_rear_wheel_joint_2" pos="0 0 0" axis="0 1 0" limited="true" range="-1 1" />
+            <geom size="0.03 0.0125" quat="0.500048 -0.499952 0.5 0.5" type="cylinder" />
+        </body>
+
+        <body name="left_steering_hinge_2" pos="2.082311 0.079601 0.035008">
+            <inertial pos="0 0 0" mass="0.05" diaginertia="4e-06 4e-06 4e-06" />
+            <joint name="left_steering_hinge_joint_2" pos="0 0 0" axis="0 0 1" limited="true" range="-1 1" />
+            <body name="left_front_wheel_2" pos="0 0 0">
+                <inertial pos="0 0 0" quat="0.5 0.500048 0.499952 0.5" mass="0.042222" diaginertia="9.44606e-05 6.11771e-05 6.11771e-05" />
+                <joint name="left_front_wheel_joint_2" pos="0 0 0" axis="0 1 0" limited="true" range="-1 1" />
+                <geom size="0.03 0.0125" quat="0.500048 -0.499952 0.5 0.5" type="cylinder" />
+            </body>
+        </body>
+
+        <body name="right_steering_hinge_2" pos="2.082311 -0.079601 0.035008">
+            <inertial pos="0 0 0" mass="0.05" diaginertia="4e-06 4e-06 4e-06" />
+            <joint name="right_steering_hinge_joint_2" pos="0 0 0" axis="0 0 1" limited="true" range="-1 1" />
+            <body name="right_front_wheel_2" pos="0 0 0">
+                <inertial pos="0 0 0" quat="0.5 0.500048 0.499952 0.5" mass="0.042222" diaginertia="9.44606e-05 6.11771e-05 6.11771e-05" />
+                <joint name="right_front_wheel_joint_2" pos="0 0 0" axis="0 1 0" limited="true" range="-1 1" />
+                <geom size="0.03 0.0125" quat="0.500048 -0.499952 0.5 0.5" type="cylinder" />
+            </body>
+        </body>
+
+    </worldbody>
+
+</mujoco>

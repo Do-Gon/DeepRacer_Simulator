@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<robot name="static_object">
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/do-gon/ros2_research_ws/src/Models_downloaded_from_free3D/10014_dolphin_v1_L3.123c87c4405d-8340-49e7-9aac-bec76c253dc0/10014_dolphin_v2_max2011_it2.obj" scale="0.005 0.005 0.005"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/do-gon/ros2_research_ws/src/Models_downloaded_from_free3D/10014_dolphin_v1_L3.123c87c4405d-8340-49e7-9aac-bec76c253dc0/10014_dolphin_v2_max2011_it2.obj" scale="0.005 0.005 0.005"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>
