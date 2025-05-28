@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # AWS Deepracer Simulation with ROS2 Foxy
 
 ![AWS Deepracer](images/Simulation.png)
