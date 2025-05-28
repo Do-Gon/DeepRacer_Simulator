@@ -123,6 +123,4 @@ After completing these steps, your system should be ready to run ROS2 Foxy simul
     ```bash
     ros2 topic echo <topic name>
     ```
-=======
-# DeepRacer_Simulator
->>>>>>> 82d80fe50c9e770203a7b39bf571132ac26a6f4e
+
